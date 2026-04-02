@@ -1,10 +1,15 @@
 # CHANGELOG
 
-## [Unreleased]
+## [0.0.2] - 2026-04-02
+
+### Changed
+
+- 重构项目目录结构
+- 更新记忆系统文档（声明性记忆、程序性记忆）
 
 ## [0.0.1] - 2026-03-14
 
-### 初始化
+### Added
 
 - 初始化 specification 子模块
 - 新增 AGENTS.md：Agent 工作指南
