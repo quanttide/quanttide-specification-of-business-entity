@@ -1,2 +1,1 @@
-# quanttide-specification-of-founder
-量潮创始人标准
+# 量潮科技工程标准
