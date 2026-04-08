@@ -16,6 +16,12 @@
 | `CONTRIBUTING.md` | 贡献指南、工作流、环境变量 |
 | `AGENTS.md` | Agent导航 |
 | `CHANGELOG.md` | 版本历史 |
+
+### 建议文件
+
+| 文件 | 用途 |
+|------|------|
+| `ROADMAP.md` | 项目路线图、未来规划 |
 | `.gitignore` | Git忽略规则 |
 
 ### AI认知视角
