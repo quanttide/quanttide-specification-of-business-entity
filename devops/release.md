@@ -19,6 +19,13 @@
 - `v1.0.1`：修复bug
 - `v2.0.0`：重大架构调整
 
+### 预发布版本
+
+- Alpha版本：`v0.0.1-alpha.1`
+- Beta版本：`v0.0.1-beta.1`
+- RC版本：`v0.0.1-rc.1`
+- Release版本：`v0.0.1`
+
 ## CHANGELOG规范
 
 ### 格式要求
@@ -57,6 +64,17 @@
 
 - 使用版本号作为标签名：`v1.0.0`
 - 格式：`v` + 主版本 + `.` + 次版本 + `.` + 修订号
+- Monorepo使用项目前缀：`项目名/v版本号`（如`cli/v0.0.1`）
+
+### Tag vs Release
+
+| 方面 | Git Tag | GitHub Release |
+|------|---------|----------------|
+| 命名 | 加`v`前缀，符合semver | 与Git Tag一致 |
+| 用途 | Git引用 | 用户可见 |
+| 示例 | `v0.1.0`或`cli/v0.1.0` | `v0.1.0`或`cli/v0.1.0` |
+
+**关键原则**：GitHub Release的Tag Name必须与Git Tag完全一致。
 
 ### 标签类型
 
@@ -139,10 +157,20 @@ git tag -a v1.0.0 -m "Release version 1.0.0"
    ```bash
    git tag <version>
    ```
+   
+   Monorepo项目使用项目前缀：
+   ```bash
+   git tag cli/v0.0.1
+   ```
 
 2. **推送标签到远程**：
    ```bash
    git push origin <version>
+   ```
+   
+   Monorepo项目：
+   ```bash
+   git push origin cli/v0.0.1
    ```
 
 ### 创建GitHub Release
@@ -152,6 +180,13 @@ git tag -a v1.0.0 -m "Release version 1.0.0"
 ```bash
 gh release create <version> \
   --title "<version>" \
+  --generate-notes
+```
+
+Monorepo项目示例：
+```bash
+gh release create cli/v0.0.1 \
+  --title "cli/v0.0.1" \
   --generate-notes
 ```
 

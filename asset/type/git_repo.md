@@ -152,79 +152,6 @@ cz bump
 git commit -m "<type>: <description>"
 ```
 
-## 版本发布规范
-
-### Tag vs Release 命名
-
-| 方面 | Git Tag | GitHub Release |
-|------|-----|---------|
-| 命名 | 加 `v` 前缀，符合 semver | 与 Git Tag 一致 |
-| 用途 | Git 引用 | 用户可见 |
-| 示例 | `v0.1.0` 或 `cli/v0.1.0` | `v0.1.0` 或 `cli/v0.1.0` |
-
-创建 Git Tag 后，同步创建 GitHub Release，Tag Name 与 Git Tag 一致。
-
-### Monorepo 标签规范
-
-对于 monorepo 项目（如 qtadmin），使用 `项目名/v+版本号` 格式：
-
-```bash
-# provider 发布
-git tag provider/v0.0.1
-git push origin provider/v0.0.1
-
-# cli 发布
-git tag cli/v0.0.1
-git push origin cli/v0.0.1
-```
-
-### 发布流程
-
-1. **更新 CHANGELOG.md** - 在对应项目目录下添加新版本和变更内容
-2. **提交 CHANGELOG.md** - 使用 `cz commit` 或手动提交
-3. **创建标签** - `git tag <project>/v<version>`
-4. **推送标签** - `git push origin <project>/v<version>`
-5. **创建 Release** - 使用 `gh release create` 或 GitHub 界面
-   - Release Tag: `<project>/v<version>`（与 Git Tag 一致）
-   - Release 标题：`<project>/v<version>`
-
-```bash
-# 示例：cli 发布
-git tag cli/v0.0.1-alpha.4
-git push origin cli/v0.0.1-alpha.4
-gh release create cli/v0.0.1-alpha.4 --title "cli/v0.0.1-alpha.4" --notes "Release notes..."
-```
-
-### 版本规范
-
-遵循语义化版本（SemVer）：
-- alpha: `v0.0.1-alpha.1`
-- beta: `v0.0.1-beta.1`
-- release: `v0.0.1`
-
-### 常见错误
-
-**问题**：Release Tag 与 Git Tag 不一致
-
-例如：Git Tag 使用 `cli/v0.0.1-alpha.4`，但 GitHub Release 使用 `v0.0.1-alpha.4`
-
-**原因**：
-1. 混淆了单仓项目与独立仓库的发布规范
-2. 误以为 GitHub Release 的 Tag 应该去掉项目前缀
-3. 文档规范不够明确
-
-**正确做法**：
-```bash
-# Git Tag（带项目前缀）
-git tag cli/v0.0.1-alpha.4
-git push origin cli/v0.0.1-alpha.4
-
-# GitHub Release（与 Git Tag 一致）
-gh release create cli/v0.0.1-alpha.4 --title "cli/v0.0.1-alpha.4" --notes "..."
-```
-
-**关键原则**：GitHub Release 的 Tag Name 必须与 Git Tag 完全一致，这样 GitHub 才能正确关联 Release 和 Git Tag。
-
 ## 子模块维护
 
 ### 提交流程
@@ -255,32 +182,6 @@ git add <子模块名>
 cz commit -m "chore: update <子模块名> submodule"
 git push origin main
 ```
-
-### 防坑校验：推送前检查
-
-**问题**：父仓库推送了一个指向未推送的子模块 commit，导致其他人无法克隆。
-
-**规则**：在父仓库 push 之前，确保所有子模块已先于父仓库执行 git push。
-
-**检查脚本**：
-```bash
-# 检查子模块是否有未推送的提交
-git submodule foreach '
-  if [ "$(git rev-list HEAD..origin/main --count 2>/dev/null || echo 0)" != "0" ]; then
-    echo "⚠️  $name 有未推送的提交，请先推送"
-    exit 1
-  fi
-'
-
-# 或使用 Python 脚本自动检查
-python scripts/commit_submodules.py --dry-run
-```
-
-**推荐工作流**：
-1. 在子模块中完成提交并推送
-2. 返回父仓库更新子模块引用
-3. 推送父仓库前运行检查脚本
-4. 确认所有子模块已推送后，再推送父仓库
 
 ## 最佳实践
 
