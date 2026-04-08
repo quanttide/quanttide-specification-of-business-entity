@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-04-08
+
+### Added
+
+- 新增asset/category/handbook.md：手册资产规范
+
+### Changed
+
+- 重构手册资产规范结构：合并为概述和写作规范两个章节
+
 ## [0.1.0] - 2026-04-08
 
 ### Added
