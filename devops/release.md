@@ -176,38 +176,6 @@ Release notes应从CHANGELOG中提取对应版本的内容。
 - [ ] Release notes内容准确
 - [ ] 主仓库子模块引用已更新
 
-## 常见问题
-
-### 如何修改已发布的Release？
-
-通过GitHub API修改：
-```bash
-gh api repos/<owner>/<repo>/releases/<release-id> \
-  -X PATCH \
-  -f name="<new-title>" \
-  -f body="<new-content>"
-```
-
-### 如何删除错误的标签？
-
-```bash
-# 删除本地标签
-git tag -d <version>
-
-# 删除远程标签
-git push origin --delete <version>
-```
-
-### 如何查看历史Release？
-
-```bash
-# 查看Release列表
-gh release list
-
-# 查看特定Release
-gh release view <version>
-```
-
 ## 参考文档
 
 - [Semantic Versioning](https://semver.org/)
