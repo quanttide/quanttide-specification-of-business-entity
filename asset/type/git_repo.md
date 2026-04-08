@@ -47,68 +47,47 @@
 
 ### AGENTS.md
 
-Agent 导航文档（简洁 ~50 行），包含：
+Agent导航文档，简洁（约50行），包含相关文档表格、快速索引、协作原则、重要提示。
+
+**内容结构**：
+- 相关文档表格
+- 快速索引表格
+- 协作原则（3条）
+- 重要提示（5条）
+- 如何维护AGENTS.md
+
+**完整示例**：
 
 ```markdown
 # AGENTS.md
 
-## 相关文档
+本仓库维护量潮科技工程标准资产。
 
-| 文档 | 用途 |
-|------|------|
-| [README](README.md) | 项目概述、子模块列表 |
-| [CONTRIBUTING](CONTRIBUTING.md) | 人机协作、子模块工作流、发布流程、环境变量 |
-| [meta/IDENTITY.md](meta/IDENTITY.md) | 仓库自我映射、子模块列表 |
-| [meta/SOUL.md](meta/SOUL.md) | AI 自我认知（自维护）|
-| [meta/TOOLS.md](meta/TOOLS.md) | 工具清单（自维护）|
+## 规范文档
 
----
+| 规范 | 路径 | 用途 |
+|------|------|------|
+| 文档格式标准 | docs/format.md | Markdown写作规范 |
+| 版本发布标准 | devops/release.md | 版本发布流程 |
 
 ## 快速索引
 
-| 任务 | 操作位置 |
+| 任务 | 查看文档 |
 |------|---------|
-| 修改子模块 | CONTRIBUTING > 子模块工作流 |
-| 发布 Release | CONTRIBUTING > 主仓库发布 Release |
-| 提交变更 | `cz commit` |
-| 处理错误 | CONTRIBUTING > 常见错误处理 |
-| 更新环境变量 | CONTRIBUTING > 环境变量 |
-| 记录日报 | `meta/report/YYYY-MM-DD.md` |
-
----
+| 编写文档 | docs/format.md |
+| 发布版本 | devops/release.md |
 
 ## 协作原则
 
 - 最小干预：仅用户明确请求时操作
 - 原子提交：每次提交独立完整
-- 验证优先：修改后运行构建验证
-
-## 重要提示
-
-- **子模块操作前先 checkout main**：`git checkout main && git pull`
-- **读取 .env 需要临时权限**：Agent 无法直接读取 .env
-- **自动同步**：.env 变更时同步更新 .env.example
-- **Release 标题**：使用 `项目名/vX.Y.Z` 格式（如 cli/v0.0.1-alpha.3）
-- **Release notes**：只包含对应版本内容
-
----
-
-## 如何维护 AGENTS.md
-
-| 类型 | 写在哪里 |
-|------|---------|
-| 详细说明、工作流步骤 | CONTRIBUTING |
-| 给链接、导航索引 | AGENTS.md |
-
-更新时机：新增文档、新增任务类型、重要规则变化时更新；README/CONTRIBUTING 已有的内容不重复。
+- 遵循规范：参照规范文档执行
 ```
 
-**规范要点**：
-- 使用场景表格（相关文档）
-- 快速索引表格
-- 协作原则（3 条）
-- 重要提示（5 条）
-- 如何维护 AGENTS.md
+**维护规则**：
+- 新增文档、新增任务类型时更新
+- 不重复README/CONTRIBUTING已有的内容
+- 详细说明写在CONTRIBUTING，导航索引写在AGENTS.md
 
 ### CHANGELOG.md
 
