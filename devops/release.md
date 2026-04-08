@@ -165,7 +165,7 @@ gh api repos/<owner>/<repo>/releases/<release-id> \
 
 Release notes应从CHANGELOG中提取对应版本的内容。
 
-## 发布检查清单
+### 发布前检查
 
 发布前确认以下事项：
 
