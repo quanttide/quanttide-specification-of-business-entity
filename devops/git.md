@@ -85,6 +85,50 @@ git push origin <tag-name>
 2. **规范格式**：使用Conventional Commits格式
 3. **及时推送**：本地提交后尽快推送到远程
 4. **拉取更新**：推送前先拉取远程更新，避免冲突
+5. **子模块同步**：更新子模块后，立即同步父仓库引用
+6. **版本标记**：发布时使用语义化版本号
+7. **CHANGELOG维护**：每次发布更新CHANGELOG.md
+
+## 子模块维护
+
+### 提交流程
+
+```bash
+# 1. 进入子模块
+cd <子模块名>
+
+# 2. 提交更改（使用commitizen）
+cz commit
+
+# 3. 推送子模块
+git push origin main
+
+# 4. 返回主仓库更新引用
+cd ..
+git add <子模块名>
+git commit -m "chore: update <子模块名> submodule"
+git push origin main
+```
+
+### 同步远程更新
+
+```bash
+# 同步指定子模块到远程最新
+git submodule update --remote <子模块名>
+git add <子模块名>
+cz commit -m "chore: update <子模块名> submodule"
+git push origin main
+```
+
+### 初始化子模块
+
+```bash
+# 初始化所有子模块
+git submodule update --init --recursive
+
+# 更新所有子模块到最新
+git submodule update --remote
+```
 
 ## 参考文档
 
