@@ -40,9 +40,15 @@
 1. **检查 CHANGELOG**：查看已有版本记录格式
 2. **更新 CHANGELOG**：在 `[Unreleased]` 下新增版本块
 3. **提交推送**：确保所有变更已推送到远程
-4. **创建 Release**：
-   - `gh release create <version> --title "v<version>" --notes-file CHANGELOG.md`
-5. **打标签**：`git tag <version>` && `git push origin <version>`
+4. **创建标签并推送**：
+   ```bash
+   git tag <version>
+   git push origin <version>
+   ```
+5. **创建 Release**：
+   ```bash
+   gh release create <version> --title "v<version>" --generate-notes
+   ```
 
 ## 版本规范
 
