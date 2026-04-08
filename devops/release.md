@@ -19,6 +19,74 @@
 - `v1.0.1`：修复bug
 - `v2.0.0`：重大架构调整
 
+## CHANGELOG规范
+
+### 格式要求
+
+- 使用Markdown格式
+- 每个版本独立章节
+- 使用日期标注：`YYYY-MM-DD`
+- 使用分类标签：Added、Changed、Fixed、Removed
+
+### 内容要求
+
+- 简洁明了，避免冗余描述
+- 使用动词开头：「新增」「修改」「修复」「移除」
+- 每条记录一行，不超过50字
+- 按重要性排序
+
+### 示例
+
+```markdown
+## [v0.0.3] - 2026-04-08
+
+### Added
+- 新增写作格式规范
+
+### Changed
+- 重命名文档文件
+- 修正发布流程
+
+### Fixed
+- 合并冗余文档
+```
+
+## Git标签规范
+
+### 标签命名
+
+- 使用版本号作为标签名：`v1.0.0`
+- 格式：`v` + 主版本 + `.` + 次版本 + `.` + 修订号
+
+### 标签类型
+
+- **轻量标签**：用于临时标记
+- **附注标签**：用于正式发布（推荐）
+
+创建附注标签：
+```bash
+git tag -a v1.0.0 -m "Release version 1.0.0"
+```
+
+## GitHub Release规范
+
+### 标题规范
+
+- 格式统一：`v<version>`
+- 示例：`v0.0.1`、`v0.0.2`、`v0.0.3`
+
+### Release Notes规范
+
+- 内容来源：从CHANGELOG提取
+- 使用标准分类：Added、Changed、Fixed、Removed
+- 遵循文档格式规范（参见docs/format.md）
+- 避免使用引号装饰普通术语
+
+### 标记规范
+
+- Latest：最新稳定版本
+- Pre-release：预发布版本（如alpha、beta）
+
 ## 发布流程
 
 ### 准备阶段
@@ -96,74 +164,6 @@ gh api repos/<owner>/<repo>/releases/<release-id> \
 ```
 
 Release notes应从CHANGELOG中提取对应版本的内容。
-
-## CHANGELOG规范
-
-### 格式要求
-
-- 使用Markdown格式
-- 每个版本独立章节
-- 使用日期标注：`YYYY-MM-DD`
-- 使用分类标签：Added、Changed、Fixed、Removed
-
-### 内容要求
-
-- 简洁明了，避免冗余描述
-- 使用动词开头：「新增」「修改」「修复」「移除」
-- 每条记录一行，不超过50字
-- 按重要性排序
-
-### 示例
-
-```markdown
-## [v0.0.3] - 2026-04-08
-
-### Added
-- 新增写作格式规范
-
-### Changed
-- 重命名文档文件
-- 修正发布流程
-
-### Fixed
-- 合并冗余文档
-```
-
-## Git标签规范
-
-### 标签命名
-
-- 使用版本号作为标签名：`v1.0.0`
-- 格式：`v` + 主版本 + `.` + 次版本 + `.` + 修订号
-
-### 标签类型
-
-- **轻量标签**：用于临时标记
-- **附注标签**：用于正式发布（推荐）
-
-创建附注标签：
-```bash
-git tag -a v1.0.0 -m "Release version 1.0.0"
-```
-
-## GitHub Release规范
-
-### 标题规范
-
-- 格式统一：`v<version>`
-- 示例：`v0.0.1`、`v0.0.2`、`v0.0.3`
-
-### Release Notes规范
-
-- 内容来源：从CHANGELOG提取
-- 使用标准分类：Added、Changed、Fixed、Removed
-- 遵循文档格式规范（参见docs/format.md）
-- 避免使用引号装饰普通术语
-
-### 标记规范
-
-- Latest：最新稳定版本
-- Pre-release：预发布版本（如alpha、beta）
 
 ## 发布检查清单
 
