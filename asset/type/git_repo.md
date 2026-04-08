@@ -16,7 +16,6 @@
 | `CONTRIBUTING.md` | 贡献指南、工作流、环境变量 | 是 |
 | `AGENTS.md` | Agent 导航 | 是 |
 | `CHANGELOG.md` | 版本历史 | 是 |
-| `meta/` | 元数据目录 | 可选 |
 | `.gitignore` | Git 忽略规则 | 是 |
 
 ### AI认知视角
