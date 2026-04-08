@@ -123,41 +123,9 @@ Agent 导航文档（简洁 ~50 行），包含：
 ### Removed
 ```
 
-## Git 提交规范
+## Git使用规范
 
-### 默认工具：commitizen
-
-使用 `commitizen` 生成符合 Conventional Commits 规范的 commit message。
-
-**基本用法：**
-```bash
-# 交互式创建规范提交
-cz commit
-# 或简写
-cz c
-
-# 自动版本升级 + 生成 CHANGELOG
-cz bump
-```
-
-**Commit 类型：**
-
-| 类型 | 说明 | 示例 |
-|------|------|------|
-| `feat` | 新功能 | `feat: add user authentication` |
-| `fix` | 修复 bug | `fix: resolve null pointer exception` |
-| `docs` | 文档更新 | `docs: update README` |
-| `test` | 测试相关 | `test: add unit tests for api` |
-| `refactor` | 代码重构 | `refactor: simplify logic` |
-| `chore` | 构建/工具 | `chore: update dependencies` |
-
-### 手动提交格式
-
-当无法使用 `cz commit` 时（如脚本、CI 环境），手动遵循格式：
-
-```bash
-git commit -m "<type>: <description>"
-```
+Git提交规范参见[devops/git.md](../../devops/git.md)
 
 ## 子模块维护
 
