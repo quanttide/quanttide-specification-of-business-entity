@@ -130,6 +130,53 @@ git submodule update --init --recursive
 git submodule update --remote
 ```
 
+## .gitignore规范
+
+### 用途
+
+.gitignore文件用于指定Git应忽略的文件和目录，避免将不必要的文件提交到仓库。
+
+### 常见过滤规则
+
+**Jupyter Book项目**：
+```gitignore
+_build/
+*.html
+```
+
+**Python项目**：
+```gitignore
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+```
+
+**Jupyter Notebook**：
+```gitignore
+.ipynb_checkpoints
+```
+
+**操作系统**：
+```gitignore
+.DS_Store
+Thumbs.db
+```
+
+**编辑器**：
+```gitignore
+.vscode/
+.idea/
+*.swp
+```
+
+### 维护原则
+
+- 根据项目类型配置对应规则
+- 及时更新，避免提交无用文件
+- 保持仓库整洁，只追踪必要的源文件
+
 ## 参考文档
 
 - [Conventional Commits](https://www.conventionalcommits.org/)
