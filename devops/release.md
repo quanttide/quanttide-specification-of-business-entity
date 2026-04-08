@@ -89,17 +89,19 @@ git tag -a v1.0.0 -m "Release version 1.0.0"
 
 ## 发布流程
 
-### 准备阶段
+### 发布前检查
 
 1. **检查未发布内容**：
    ```bash
    git log <last-version>..HEAD --oneline
    ```
 
-2. **确认代码质量**：
-   - 所有测试通过
-   - 文档已更新
-   - 无未提交的变更
+2. **确认发布就绪**：
+   - [ ] 所有测试通过
+   - [ ] 文档已更新
+   - [ ] 无未提交的变更
+   - [ ] CHANGELOG已更新
+   - [ ] 版本号符合语义化版本规范
 
 ### CHANGELOG更新
 
@@ -165,12 +167,10 @@ gh api repos/<owner>/<repo>/releases/<release-id> \
 
 Release notes应从CHANGELOG中提取对应版本的内容。
 
-### 发布前检查
+### 发布后确认
 
-发布前确认以下事项：
+发布完成后确认以下事项：
 
-- [ ] CHANGELOG已更新
-- [ ] 版本号符合语义化版本规范
 - [ ] Git标签已创建并推送
 - [ ] GitHub Release已创建
 - [ ] Release notes内容准确
