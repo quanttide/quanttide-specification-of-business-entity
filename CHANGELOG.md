@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## [Unreleased]
+
+## [0.0.3] - 2026-04-08
+
+### Added
+
+- 新增写作格式规范：write/format.md
+- 新增引号使用规范：docs/format.md 引号章节
+
+### Changed
+
+- 重命名 write/format.md 到 docs/format.md
+- 修改标题：从"写作格式标准"改为"文档格式标准"
+- 修正 CONTRIBUTING.md 发布流程顺序和命令
+- 更新记忆系统文档
+
+### Fixed
+
+- 合并 monorepo.md 到 git_repo.md
+
 ## [0.0.2] - 2026-04-02
 
 ### Changed
