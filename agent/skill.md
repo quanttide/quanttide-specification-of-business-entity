@@ -44,6 +44,11 @@ skill-name/
 - 不能包含连续连字符（--）
 - 必须与父目录名称匹配
 
+建议遵循 `<领域标识>-<技能名称>` 格式，例如：
+- `devops-release`：devops 领域的 release 技能
+- `docs-format`：docs 领域的 format 技能
+- `code-lint`：code 领域的 lint 技能
+
 ### description 字段
 
 必填字段：
