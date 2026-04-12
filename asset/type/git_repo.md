@@ -20,6 +20,13 @@
 | `CHANGELOG.md` | 版本历史记录 |
 | `ROADMAP.md` | 项目路线图、未来规划 |
 
+### 保留目录
+
+| 目录 | 业务意义 |
+|------|---------|
+| `.agents/` | Agent 技能定义（如 SKILL.md） |
+| `.quanttide/` | 项目契约定义（如 contract.yaml） |
+
 ### AI认知视角
 
 三个核心文件对应AI的不同认知层次：
