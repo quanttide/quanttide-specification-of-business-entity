@@ -7,7 +7,7 @@
 | 规范 | 路径 | 用途 |
 |------|------|------|
 | 文档格式标准 | 量潮文档格式章程（`quanttide-bylaw-of-document-engineering/format/index.md`） | Markdown写作规范、引号使用、格式要求 |
-| 版本发布标准 | `devops/release.md` | 版本号规范、发布流程、标签管理 |
+| 版本发布标准 | 量潮 DevOps 手册（`quanttide-handbook-of-devops/stage/release.md`） | 版本号规范、发布流程、标签管理 |
 | Git仓库标准 | `asset/type/git_repo.md` | 仓库文件结构、提交规范、子模块维护 |
 | 工程标准资产 | `asset/category/specification.md` | 标准的创建、维护、废弃流程 |
 
@@ -18,7 +18,7 @@
 | 任务 | 查看文档 |
 |------|---------|
 | 编写文档 | 量潮文档格式章程（`quanttide-bylaw-of-document-engineering/format/index.md`） |
-| 发布版本 | devops/release.md |
+| 发布版本 | 量潮 DevOps 手册 · [发布](https://github.com/quanttide/quanttide-handbook-of-devops/blob/main/stage/release.md) |
 | 维护仓库 | asset/type/git_repo.md |
 | 创建标准 | asset/category/specification.md |
 

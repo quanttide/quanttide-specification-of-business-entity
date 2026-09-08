@@ -24,7 +24,7 @@
 
 ## 发布版本
 
-遵循版本发布标准（devops/release.md）
+遵循版本发布标准（[量潮 DevOps 手册 · 发布](https://github.com/quanttide/quanttide-handbook-of-devops/blob/main/stage/release.md)）
 
 ## 联系方式
 

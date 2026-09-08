@@ -6,6 +6,12 @@
 
 - README.md/AGENTS.md：文档格式标准引用更新（`docs/format.md` 已迁移至 `quanttide-bylaw-of-document-engineering/format/index.md`，升级为量潮社区约定）
 
+### Removed
+
+- 移除 `devops/`（git.md、release.md）：整理迁入量潮 DevOps 手册（`quanttide-handbook-of-devops`，`stage/git.md` 与 `stage/release.md`），各处引用更新为手册链接
+- 移除 `agent/skill.md`：整理迁入量潮智能体工程手册（`quanttide-handbook-of-agent-engineering`，`skill/index.md`）
+- 移除 `meta/`（index.md、field.md）：整理迁入量潮元工程标准（`quanttide-specification-of-philosophy`，`meta/`）
+
 ## [0.1.3] - 2026-04-12
 
 ### Added
