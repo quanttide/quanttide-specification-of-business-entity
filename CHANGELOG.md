@@ -4,7 +4,7 @@
 
 ### Changed
 
-- work/index.md：正式定义 Workbench / Workspace / Task / Workflow 通用语言（任务为最小单元，工作流为依赖编排，工作空间以上下文为边界）
+- work/index.md：新增工作物（Artifact）定义——任务与工作流围绕的中心，验收合入驱动其演化；与 DevOps 领域的「制品」同名不同义，以领域区分
 - README.md/AGENTS.md：文档格式标准引用更新（`docs/format.md` 已迁移至 `quanttide-bylaw-of-document-engineering/format/index.md`，升级为量潮社区约定）
 
 ### Removed
